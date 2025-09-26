@@ -1,8 +1,13 @@
 *{
-    color:blue;/*a comment*/
+    background-color: rgb(255, 211, 117);
+    text-align:center;
+    color:darkblue;/*a comment*/
     margin:10px;
-    font:14px Tahoma;
+    font-family:"Times New Roman";
+    /*font:14px Tahoma;*/
 }
+
+
 
 button{
     color:black;
