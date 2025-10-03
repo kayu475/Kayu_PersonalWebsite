@@ -1,20 +1,21 @@
 *{
-    background-color: rgb(255, 211, 117);
+    /*background-color: rgb(255, 211, 117);*/
+    background-image:url("crooked.jpg");
     text-align:center;
-    color:darkblue;/*a comment*/
+    color:rgb(217, 230, 255);/*a comment*/
     margin:10px;
     font-family:"Times New Roman";
     /*font:14px Tahoma;*/
 }
 
 button{
-    color:black;
+    color:rgb(160, 160, 160);
 }
 
-.box{
+/*.box{
     display:flex;
     
-}
+}*/
 
 .box div{
     border:solid 1px black;
@@ -23,13 +24,13 @@ button{
 .grid-container{
     display:grid;
     grid-template-rows:100px 100px;
-    grid-template-columns:100px 100px 100px;
+    grid-template-columns:width/6;
     grid-gap: 1px;
 }
 
 .grid-item1{
     background:lightgray;
-    border:solid 1px black;
+    border:solid 2px darkblue;
     grid-column-start:1;
     grid-column-end:3;
     grid-row-start:1;
@@ -37,19 +38,28 @@ button{
 }
 
 .grid-item2{
-    background:lightgray;
-    border:solid 1px black;
-    grid-column-start:3;
-    grid-column-end:4;
-    grid-row-start:1;
+    background:rgb(255, 255, 132);
+    border:solid 2px darkblue;
+    grid-column-start:1;
+    grid-column-end:3;
+    grid-row-start:2;
     grid-row-end:3;
 }
 
 .grid-item3{
+    background:rgb(255, 255, 132);
+    border:solid 2px darkblue;
+    grid-column-start:3;
+    grid-column-end:6;
+    grid-row-start:1;
+    grid-row-end:2;
+}
+
+.grid-item4{
     background:lightgray;
-    border:solid 1px black;
-    grid-column-start:1;
-    grid-column-end:3;
+    border:solid 2px darkblue;
+    grid-column-start:3;
+    grid-column-end:6;
     grid-row-start:2;
     grid-row-end:3;
 }
