@@ -1,21 +1,21 @@
 var title=document.querySelector("h1");
-title.innerHTML="This is another title from code.js";
+title.innerHTML="code.js in control";
 
-var button= document.querySelector(".intro");
+var button= document.querySelector(".subpage1");
 button.addEventListener("click", function1);
 
 function function1(){
     alert("Let me tell you more about me!");
 }
 
-var button= document.querySelector("#project");
+var button= document.querySelector("#subpage2");
 button.addEventListener("click", function2);
 
 function function2(){
     alert("plenty");
 }
 
-var button= document.querySelector("#cv");
+var button= document.querySelector("#subpage3");
 button.addEventListener("click", function3);
 
 function function3(){

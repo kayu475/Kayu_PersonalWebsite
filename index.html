@@ -1,37 +1,60 @@
 <html>
-    <head>
-        <link href="style.css" rel="stylesheet"/>
-    </head>
-    <body>
-        <h1>This is a title from html</h1>
 
-        <div id="main">
-            <!--this is a comment-->
-            <b>THIS IS MY PERSONAL WEBSITE</b>
-            <button class="intro">about me</button>
-            <button id="project">my works</button>
-            <button id="cv">CV</button>
-            <p>Welcome to my personal website!I am Kayu Lau or you can call me Lauren.</p>
+<head>
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <h1>This is a title from html</h1>
+
+    <header>
+        <nav id="nav">
+            <ul>
+                <!--this is a comment-->
+                <b>Kayu Lau</b>
+                <button class="subpage1">about me</button>
+                <button id="subpage2">my works</button>
+                <button id="subpage3">CV</button>
+            </ul>
+        </nav>
+
+        <div id="main" class="flex-container">
             <img src="me.jpg" width="500" height="300">
+            <div>
+                <p>Welcome to my personal website!I am Kayu Lau or you can call me Lauren.</p>
+                <a class="intro_button" href="">Follow me on Instagram</a>
+            </div>
         </div>
+    </header>
 
-         <div class="box">
-                <div>*</div>
-                <div>*****</div>
-                <div>*******
-                    <br>*
-                    <br>***
-                </div>
+    <!--<div class="box">
+        <div>*</div>
+        <div>*****</div>
+        <div>*******
+            <br>*
+            <br>***
         </div>
+    </div>
 
-        <div class="grid-container">
-            <div id="my_works" class="grid-item1">Grid 1</div>
-            <div class="grid-item2">Grid 2</div>
-            <div class="grid-item3">Grid 3</div>
-            <div class="grid-item4">Grid 4</div>
-        </div>
+    <div class="grid-container">
+        <div id="my_works" class="grid-item1">Grid 1</div>
+        <div class="grid-item2">Grid 2</div>
+        <div class="grid-item3">Grid 3</div>
+        <div class="grid-item4">Grid 4</div>
+    </div>
+-->
+    <section id="vis-scatterplot">
+        This is my section
+    </section>
 
-    <script src="code.js"></script>
+    <section id="vis-pie">
+        This is my section2
+    </section>
 
-    </body>
+    <!--<script src="code.js"></script>-->
+    <script src="src/scatterplot.js"></script>
+    <script src="src/pie.js"></script>
+</body>
+
 </html>

@@ -1,15 +1,15 @@
 *{
     /*background-color: rgb(255, 211, 117);*/
-    background-image:url("crooked.jpg");
-    text-align:center;
-    color:rgb(217, 230, 255);/*a comment*/
+    /*background-image:url("crooked.jpg");*/
+    /*text-align:center;*/
+    color:darkblue;/*a comment*/
     margin:10px;
     font-family:"Times New Roman";
     /*font:14px Tahoma;*/
 }
 
 button{
-    color:rgb(160, 160, 160);
+    color:darkgoldenrod;
 }
 
 /*.box{
@@ -62,4 +62,67 @@ button{
     grid-column-end:6;
     grid-row-start:2;
     grid-row-end:3;
+}
+
+header, section{
+    margin:2em auto;
+    width:min(75em,100%);
+    background-color:antiquewhite;
+}
+
+nav{
+    margin: 1em auto 1em auto;
+    width:min(1000px,100%);
+    font-size:1.5em
+}
+
+nav ul{
+    display:flex;
+    align-items:center;
+    list-style-type:none;
+    gap:2em;
+}
+
+nav p:first-child{
+    margin-right:auto;
+    font-size:1.5em;
+}
+
+button.subpage1{
+    border-radius: .5em;
+    font-weight:600;
+}
+
+button#subpage2{
+    border-radius: .5em;
+    font-weight:600;
+}
+
+button#subpage3{
+    border-radius: .5em;
+    font-weight:600;
+}
+
+.flex-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:3em;
+}
+
+h1{
+    font-size:2em;
+
+}
+
+.intro_button{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    background-color:lightsalmon;
+    padding:.75em 1em;
+    margin: top 0em;
+    border-radius:.5em;
+    font-weight:600;
 }
