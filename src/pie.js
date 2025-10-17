@@ -47,4 +47,4 @@ arcs.append("text")
     .attr("transform", d => `translate(${arc.centroid(d)})`)
     .attr("dy", "0.35em")
     .style("text-anchor", "middle")
-    .text(d => d.pdata.name);
+    .text(d => d.data.name);

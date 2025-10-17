@@ -12,7 +12,7 @@ var button= document.querySelector("#subpage2");
 button.addEventListener("click", function2);
 
 function function2(){
-    alert("plenty");
+    alert("Click 'OK' to continue");
 }
 
 var button= document.querySelector("#subpage3");
