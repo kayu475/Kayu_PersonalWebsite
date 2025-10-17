@@ -1,6 +1,8 @@
+(function(){
+
 // Set the dimensions and margin of the pie chart
 const pwidth = 400;
-const pheight = 400;
+const pheight = 450;
 const pmargin = 20;
 
 // Create the SVG canvas
@@ -10,6 +12,15 @@ const psvg = d3.select("#vis-pie")
     .attr("height", pheight)
     .append("g")
     .attr("transform", `translate(${pwidth / 2}, ${pheight / 2})`);
+
+// Add a title to the pie chart
+psvg.append("text")
+    .attr("x", 0)
+    .attr("y", -pheight / 2 + pmargin) // Position above the chart
+    .attr("text-anchor", "middle")
+    .style("font-size", "16px")
+    .style("font-weight", "bold")
+    .text("Personality Traits and Abilities");
 
 // Sample data for personality traits and abilities
 const pdata = [
@@ -48,3 +59,4 @@ arcs.append("text")
     .attr("dy", "0.35em")
     .style("text-anchor", "middle")
     .text(d => d.data.name);
+})();

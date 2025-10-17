@@ -30,7 +30,7 @@ mynode.style.color="blue";
 
 //add event listener
 mynode.addEventListener("click", welcomeToWork1);
-document.querySelector("#my_works").appendChild(mynode);
+//document.querySelector("#my_works").appendChild(mynode);
 
 function welcomeToWork1(){
     mynode.innerHTML="Thank you for your interest!"

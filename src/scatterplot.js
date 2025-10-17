@@ -1,3 +1,5 @@
+    (function(){
+    
     const data = [
       { year: 2020, creative: 50 },
       { year: 2021, creative: 75 },
@@ -71,3 +73,5 @@
         .attr("text-anchor", "middle")
         .style("font-size", "16px")
         .text("Creative Artwork Over Past 4 Years");
+
+  })();
