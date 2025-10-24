@@ -133,3 +133,129 @@ h1 {
     font-weight: 600;
 }
 
+.link {
+    stroke: #2c3e50;
+    /* Dark navy */
+    stroke-opacity: 0.85;
+    stroke-width: 3px;
+    /* Thick and visible */
+}
+
+/* Optional: Arrowheads */
+.link-arrow {
+    stroke: #2c3e50;
+    stroke-opacity: 0.85;
+    stroke-width: 3px;
+    /*marker-end: url(#arrow);*/
+}
+
+#vis-nodelink {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.link-arrow {
+    stroke: #2c3e50;
+    stroke-opacity: .85;
+    stroke-width: 3px;
+    marker-end: url(#arrow);
+}
+
+.child-link {
+    stroke: #95a5a6;
+    stroke-opacity: .6;
+    stroke-width: 1.5px;
+}
+
+.cross-link {
+    stroke: #7f8c8d;
+    stroke-width: 1.5px;
+    stroke-dasharray: 5, 5;
+    opacity: 0.7;
+}
+
+.node circle {
+    stroke: #fff;
+    stroke-width: 3px;
+    cursor: move;
+}
+
+.central circle {
+    fill: #e74c3c;
+}
+
+.media circle {
+    fill: #3498db;
+}
+
+.work circle {
+    fill: #27ae60;
+}
+
+.node text {
+    font: 13px sans-serif;
+    pointer-events: none;
+    fill: #2c3e50;
+    font-weight: 500;
+}
+
+.node:hover circle {
+    stroke: #000;
+    stroke-width: 4px;
+}
+
+.tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: rgba(0, 0, 0, .8);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+#exportBtn {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 100;
+    padding: 10px 16px;
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+svg {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .cell {
+      cursor: pointer;
+      transition: stroke 0.2s;
+    }
+    .cell:hover {
+      stroke: #000;
+      stroke-width: 2;
+    }
+    .label {
+      font-size: 11px;
+      fill: #333;
+    }
+    .title {
+      text-anchor: middle;
+      font-size: 24px;
+      font-weight: bold;
+      fill: #2c3e50;
+    }
+    .subtitle {
+      text-anchor: middle;
+      font-size: 14px;
+      fill: #7f8c8d;
+    }
