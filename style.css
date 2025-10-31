@@ -232,30 +232,87 @@ h1 {
 }
 
 svg {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-    .cell {
-      cursor: pointer;
-      transition: stroke 0.2s;
-    }
-    .cell:hover {
-      stroke: #000;
-      stroke-width: 2;
-    }
-    .label {
-      font-size: 11px;
-      fill: #333;
-    }
-    .title {
-      text-anchor: middle;
-      font-size: 24px;
-      font-weight: bold;
-      fill: #2c3e50;
-    }
-    .subtitle {
-      text-anchor: middle;
-      font-size: 14px;
-      fill: #7f8c8d;
-    }
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cell {
+    cursor: pointer;
+    transition: stroke 0.2s;
+}
+
+.cell:hover {
+    stroke: #000;
+    stroke-width: 2;
+}
+
+.label {
+    font-size: 11px;
+    fill: #333;
+}
+
+.title {
+    text-anchor: middle;
+    font-size: 24px;
+    font-weight: bold;
+    fill: #2c3e50;
+}
+
+.subtitle {
+    text-anchor: middle;
+    font-size: 14px;
+    fill: #7f8c8d;
+}
+
+/* ---- dot-density map styles ---- */
+.map-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.tooltip {
+  position: absolute;
+  background: rgba(0,0,0,0.85);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+.map-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.cartogram-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.tooltip {
+  position: absolute;
+  background: rgba(0,0,0,0.85);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+  z-index: 1000;
+}

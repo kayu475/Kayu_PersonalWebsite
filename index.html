@@ -3,6 +3,7 @@
 <head>
     <link href="style.css" rel="stylesheet" />
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
 </head>
 
 <body>
@@ -22,9 +23,10 @@
         <div id="main" class="flex-container">
             <img src="pictures/me.jpg" width="500" height="300">
             <div>
-                <p>Welcome to my personal website!I am Kayu Lau or you can call me Lauren. I am a film lover and animal lover.</p>
-                <a class="intro_button"
-                    href="https://www.birdlife.org/partners/wild-bird-society-of-japan-wbsj/S">A website about birds</a>
+                <p>Welcome to my personal website!I am Kayu Lau or you can call me Lauren. I am a film lover and animal
+                    lover.</p>
+                <a class="intro_button" href="https://www.birdlife.org/partners/wild-bird-society-of-japan-wbsj/S">A
+                    website about birds</a>
             </div>
         </div>
     </header>
@@ -45,11 +47,21 @@
         This is an adjacency matrix
     </section>
 
+    <section id="vis-ddMap">
+        This is a dot density map
+    </section>
+
+    <section id="vis-gridCartogram">
+        This is a grid cartogram
+    </section>
+
     <script src="code.js"></script>
     <script src="src/pie.js"></script>
     <script src="src/sunburst.js"></script>
     <script src="src/nodelink.js"></script>
     <script src="src/AdjMatrix.js"></script>
+    <script src="src/ddMap.js"></script>
+    <script src="src/gridCartogram.js"></script>
 
 </body>
 
