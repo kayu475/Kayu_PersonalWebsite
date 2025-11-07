@@ -45,7 +45,7 @@ layer2.forEach(m => links.push({source:"Creative Media", target:m.id, type:"main
 // Media → Works
 layer3.forEach(w => links.push({source:w.parent, target:w.id, type:"child"}));
 
-// NEW: Cross-relationships
+// Cross-relationships
 links.push({source: "From One Shore to Another", target: "Letter", type: "cross"});
 links.push({source: "Lantau Tomorrow Vision (Peng Chau)", target: "Academic Trauma", type: "cross"});
 
@@ -75,7 +75,7 @@ svg.append("text")
     .text("Explorations in Art, Code & Social Engagement");
 
 /* -------------------------------------------------
-   4. ARROWHEAD (only for main links)
+   4. ARROWHEAD
    ------------------------------------------------- */
 svg.append("defs").append("marker")
     .attr("id","arrow")
@@ -104,7 +104,7 @@ const simulation = d3.forceSimulation(nodes)
                      d.group==="media"?   35 : 22));
 
 /* -------------------------------------------------
-   6. LINKS (with type-based styling)
+   6. LINKS
    ------------------------------------------------- */
 const link = svg.append("g")
     .attr("class","links")
@@ -164,13 +164,92 @@ node.on("mouseover", (event,d)=>{
 .on("mouseout",()=>tooltip.transition().duration(400).style("opacity",0));
 
 /* -------------------------------------------------
-   9. ZOOM
-   ------------------------------------------------- 
-const zoom = d3.zoom()
-    .scaleExtent([0.3,5])
-    .on("zoom", ({transform})=>svg.selectAll("g").attr("transform",transform));
-svg.call(zoom);
-*/
+   9. FILTER PANEL (BOTTOM-RIGHT)
+   ------------------------------------------------- */
+const categories = [
+    "Photography",
+    "Installation",
+    "Coding",
+    "Video Editing",
+    "Creative Writing",
+    "Socially-Engaged Project"
+];
+
+const filterBox = svg.append("g")
+    .attr("transform", `translate(${width - 220},${height - 240})`);
+
+filterBox.append("rect")
+    .attr("width", 200)
+    .attr("height", 220)
+    .attr("rx", 12)
+    .attr("fill", "white")
+    .attr("stroke", "#ddd")
+    .attr("stroke-width", 2)
+    .style("box-shadow", "0 4px 12px rgba(0,0,0,0.1)");
+
+filterBox.append("text")
+    .attr("x", 100)
+    .attr("y", 28)
+    .attr("text-anchor", "middle")
+    .style("font-size", "16px")
+    .style("font-weight", "bold")
+    .style("fill", "#2c3e50")
+    .text("Filter by Medium");
+
+const filterItems = filterBox.selectAll(".filter-item")
+    .data(categories)
+    .enter().append("g")
+    .attr("class", "filter-item")
+    .attr("transform", (d,i) => `translate(20, ${50 + i*28})`)
+    .style("cursor", "pointer");
+
+filterItems.append("rect")
+    .attr("width", 160)
+    .attr("height", 24)
+    .attr("rx", 6)
+    .attr("fill", "#f8f9fa")
+    .attr("stroke", "#ccc");
+
+filterItems.append("text")
+    .attr("x", 12)
+    .attr("y", 16)
+    .style("font-size", "13px")
+    .style("fill", "#2c3e50")
+    .text(d => d);
+
+let activeFilter = null;
+
+filterItems.on("click", function(event, category) {
+    if (activeFilter === category) {
+        activeFilter = null;
+        d3.select(this).select("rect").attr("fill", "#f8f9fa");
+    } else {
+        activeFilter = category;
+        filterItems.select("rect").attr("fill", "#f8f9fa");
+        d3.select(this).select("rect").attr("fill", "#e3f2fd");
+    }
+
+    // Update visibility
+    node.transition().duration(600)
+        .style("opacity", d => {
+            if (activeFilter === null) return 1;
+            if (d.id === "Creative Media") return 1;
+            if (d.id === activeFilter) return 1;
+            if (d.parent === activeFilter) return 1;
+            return 0.1;
+        });
+
+    link.transition().duration(600)
+        .style("opacity", d => {
+            if (activeFilter === null) return 1;
+            const sourceVisible = (d.source.id === "Creative Media") || 
+                                 (d.source.id === activeFilter) || 
+                                 (d.source.parent === activeFilter);
+            const targetVisible = (d.target.id === activeFilter) || 
+                                 (d.target.parent === activeFilter);
+            return (sourceVisible && targetVisible) ? 1 : 0.1;
+        });
+});
 
 /* -------------------------------------------------
    10. TICK
@@ -203,6 +282,9 @@ window.addEventListener('resize',()=>{
     const w = window.innerWidth, h = window.innerHeight;
     svg.attr("width",w).attr("height",h);
     simulation.force("center", d3.forceCenter(w/2,h/2)).alpha(.3).restart();
+    
+    // Reposition filter box
+    filterBox.attr("transform", `translate(${w - 220},${h - 240})`);
 });
 
 /* -------------------------------------------------
