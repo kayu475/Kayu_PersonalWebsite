@@ -69,6 +69,9 @@ button {
     grid-row-end: 3;
 }
 
+/* ---- hyperlink, buttons styles ---- */
+/* ---- tabular styles ---- */
+/* ---- scatterplot and pie chart styles ---- */
 header,
 section {
     margin: 2em auto;
@@ -132,6 +135,9 @@ h1 {
     border-radius: .5em;
     font-weight: 600;
 }
+
+/* ---- No: sunburst diagram styles ---- */
+
 
 .link {
     stroke: #2c3e50;
