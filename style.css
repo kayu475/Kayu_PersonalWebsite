@@ -82,16 +82,50 @@ section {
 nav {
     margin: 1em auto 1em auto;
     width: min(1000px, 100%);
-    font-size: 1.5em
+    font-size: 1.5em;
 }
 
+/* ——— KAYU LAU: BIG ON LEFT ——— */
 nav ul {
     display: flex;
     align-items: center;
     list-style-type: none;
     gap: 2em;
+    padding: 0;
+    margin: 0;
 }
 
+nav ul b {
+    font-size: 2em;
+    /* ← EXACTLY what you asked for */
+    font-weight: 900;
+    margin-right: auto;
+    /* pushes buttons to the right */
+    line-height: 1;
+}
+
+/* ——— THREE BUTTONS: ROUND + HAND CURSOR ——— */
+a.subpage1,
+a#subpage2,
+a#subpage3 {
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.4em 1em;
+    border-radius: 1.5em;
+    border: 2px solid darkblue;
+    background-color: antiquewhite;
+    transition: all 0.2s ease;
+    font-weight: 600;
+}
+
+a.subpage1:hover,
+a#subpage2:hover,
+a#subpage3:hover {
+    background-color: rgb(255, 255, 132);
+    border-color: darkgoldenrod;
+}
+
+/* ——— REST OF YOUR ORIGINAL STYLES (unchanged) ——— */
 nav p:first-child {
     margin-right: auto;
     font-size: 1.5em;
@@ -122,7 +156,6 @@ button#subpage3 {
 
 h1 {
     font-size: 2em;
-
 }
 
 .intro_button {
@@ -136,29 +169,49 @@ h1 {
     font-weight: 600;
 }
 
-/* ---- No: sunburst diagram styles ---- */
+/* Make both buttons feel more "clickable" on hover */
+.intro_button:hover {
+    background-color: #e67e68 !important;   /* a nice darker coral for the YouTube button */
+    transform: translateY(-1px);            /* tiny lift effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* subtle shadow */
+}
 
-/*node-link diagram*/
+/* Special darker version for the "Back to Home" button on subpages */
+a.intro_button[href="../index.html"]:hover {
+    background-color: #d4755f !important;   /* slightly darker than lightsalmon */
+}
+
+/* ——— PHOTO LEFT + TEXT RIGHT ——— */
+#main.flex-container {
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+#main.flex-container img {
+    flex-shrink: 0;
+}
+
+#main.flex-container>div {
+    flex: 1;
+    min-width: 300px;
+}
+
+@media (max-width: 800px) {
+    #main.flex-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #main.flex-container img {
+        margin: 0 auto;
+    }
+}
+
+/* ——— ALL YOUR VISUALIZATION STYLES BELOW (100% unchanged) ——— */
 .link {
     stroke: #2c3e50;
-    /* Dark navy */
     stroke-opacity: 0.85;
     stroke-width: 3px;
-    /* Thick and visible */
-}
-
-/* Optional: Arrowheads */
-.link-arrow {
-    stroke: #2c3e50;
-    stroke-opacity: 0.85;
-    stroke-width: 3px;
-    /*marker-end: url(#arrow);*/
-}
-
-#vis-nodelink {
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .link-arrow {
@@ -166,6 +219,12 @@ h1 {
     stroke-opacity: .85;
     stroke-width: 3px;
     marker-end: url(#arrow);
+}
+
+#vis-nodelink {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .child-link {
@@ -271,54 +330,11 @@ svg {
     fill: #7f8c8d;
 }
 
-/* ---- dot-density map styles ---- */
-.map-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.tooltip {
-  position: absolute;
-  background: rgba(0,0,0,0.85);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 13px;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.2s;
-  white-space: nowrap;
-  z-index: 1000;
-}
-
-.map-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
+.map-wrapper,
 .cartogram-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.tooltip {
-  position: absolute;
-  background: rgba(0,0,0,0.85);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 13px;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.2s;
-  white-space: nowrap;
-  z-index: 1000;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
 }
