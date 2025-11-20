@@ -1,4 +1,4 @@
-var title=document.querySelector("h1");
+//var title=document.querySelector("h1");
 title.innerHTML="My Personal Website";
 
 /*
