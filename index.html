@@ -1,53 +1,72 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link href="style.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayu Lau | Personal Website</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- D3 and TopoJSON -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://unpkg.com/topojson@3"></script>
 </head>
 
 <body>
-    <h1>This is a title from html</h1>
-
     <header>
-        <nav id="nav">
+        <nav aria-label="Main navigation">
             <ul>
-                <!--this is a comment-->
-                <b>Kayu Lau</b>
-                <a class="subpage1" href="#vis-pie">About Me</a>
-                <a id="subpage2" href="subpage/my_work.html">My Works</a>
-                <!--<button id="subpage3">CV</button>-->
-                <a id="subpage3" href="subpage/beyond_school.html">Beyond School</a>
+                <li><strong>Kayu Lau</strong></li>
+                <li><a href="#vis-pie" class="subpage1">About Me</a></li>
+                <li><a href="subpage/my_work.html" id="subpage2">My Works</a></li>
+                <li><a href="subpage/beyond_school.html" id="subpage3">Beyond School</a></li>
             </ul>
         </nav>
 
         <div id="main" class="flex-container">
-            <img src="pictures/kayulau.jpg" width="300" height="300">
-            <div>
-                <p>Welcome to my personal website!I am Kayu Lau or you can call me Lauren.
-                    I am a student of the School of Creative Media at City University of Hong Kong.
-                    In this Website, I introduce myself through different types of diagram. I also showcase
-                    many of my previous artworks. Hope you can know more about me after navagating my personal website.
-                    Here is my YouTube channel. Please look forward to my upcoming updates.
+            <img src="pictures/kayulau.jpg" alt="Kayu Lau (Lauren)" width="300" height="300">
+            
+            <div class="intro-text">
+                <p>
+                    Welcome to my personal website! I’m Kayu Lau — you can also call me Lauren.<br>
+                    I’m a student at the School of Creative Media, City University of Hong Kong.
                 </p>
-                <a class="intro_button" href="https://youtube.com/@kayulau7863?si=Y-jswBuAprUC-mIf">
-                    Subscribe to my YouTube channel</a>
+                <p>
+                    On this site I introduce myself through interactive data visualizations and showcase some of my previous artworks. 
+                    I hope you enjoy exploring and getting to know me better!
+                </p>
+                <p>
+                    Here’s my YouTube channel — please look forward to new updates!
+                </p>
+                
+                <a class="intro_button" href="https://www.youtube.com/@kayulau7863" target="_blank" rel="noopener">
+                    Subscribe to my YouTube channel
+                </a>
             </div>
         </div>
     </header>
 
-    <section id="vis-pie">
-        This is a pie chart
-    </section>
+    <main>
+        <!-- Pie Chart Section -->
+        <section id="vis-pie" aria-labelledby="pie-title">
+            <h2 id="pie-title">About Me - Pie Chart</h2>
+            <div id="pie-chart-container">
+                <!-- The pie chart SVG will be injected here by pie.js -->
+            </div>
+        </section>
 
-    <!--<section id="vis-sunburst">
-        This is a sunburst diagram
-    </section>-->
+        <!-- Future sections (uncomment when ready) -->
+        <!--
+        <section id="vis-sunburst" aria-labelledby="sunburst-title">
+            <h2 id="sunburst-title">Sunburst Diagram</h2>
+            <div id="sunburst-container"></div>
+        </section>
+        -->
+    </main>
 
+    <!-- Scripts at the end for better loading performance -->
     <script src="code.js"></script>
     <script src="src/pie.js"></script>
-    <!--<script src="src/sunburst.js"></script>-->
-
+    <!-- <script src="src/sunburst.js"></script> -->
 </body>
-
 </html>

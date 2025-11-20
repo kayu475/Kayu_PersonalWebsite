@@ -85,6 +85,41 @@ nav {
     font-size: 1.5em;
 }
 
+/* ——— CENTER THE PIE CHART PERFECTLY ——— */
+#vis-pie {
+    display: flex;                /* makes flex centering work */
+    flex-direction: column;       /* stack title + chart vertically */
+    justify-content: center;     /* vertical center */
+    align-items: center;          /* horizontal center */
+    min-height: 600px;            /* gives it room to breathe */
+    padding: 2em 0;               /* extra breathing room top/bottom */
+    text-align: center;           /* keeps any text centered too */
+}
+
+/* Optional: make the SVG itself a bit larger and more “floating” */
+#vis-pie svg {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-radius: 16px;
+    background: white;           /* already there, just reinforcing */
+}
+
+/* ——— TOOLTIP FOR PIE CHART ——— */
+.pie-tooltip {
+    position: absolute;
+    background: rgba(255, 248, 169, 0.85);
+    color: darkblue;          /* now soft creamy text */
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    white-space: nowrap;
+}
+
 /* ——— KAYU LAU: BIG ON LEFT ——— */
 nav ul {
     display: flex;
