@@ -1,53 +1,46 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayu Lau | My Works</title>
     <link href="../style.css" rel="stylesheet" />
     <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 
 <body>
-    <h1>My Works</h1>
 
-    <!--<div class="box">
-        <div>*</div>
-        <div>*****</div>
-        <div>*******
-            <br>*
-            <br>***
-        </div>
-    </div>-->
+    <header>
+        <h1>My Works</h1>
+    </header>
 
-    <div class="grid-container">
-        <div id="my_works" class="grid-item1">Grid 1</div>
-        <div class="grid-item2">Grid 2</div>
-        <div class="grid-item3">Grid 3</div>
-        <div class="grid-item4">Grid 4</div>
-    </div>
-
-    <section id="vis-scatterplot">
-        This is a scatterplot
-    </section>
+    <!-- Future visualization sections (already styled by your main CSS) -->
+    <!--<section id="vis-scatterplot">
+        <h2>Project Timeline – Scatterplot</h2>
+        <div id="scatterplot-container"></div>
+    </section>-->
 
     <section id="vis-nodelink">
-        This is a node-link diagram
+        <h2>Artworks Showcase – Node-Link Diagram</h2>
+        <div id="nodelink-container"></div>
     </section>
 
-    <section id="vis-AdjMatrix">
-        This is an adjacency matrix
-    </section>
+    <!--<section id="vis-AdjMatrix">
+        <h2>Skill Connections – Adjacency Matrix</h2>
+        <div id="adjmatrix-container"></div>
+    </section>-->
 
-    <!--<script src="code.js"></script>-->
+    <!-- Back to Home button – perfectly matches your main page -->
+    <div style="text-align:center; margin:5em 0 3em;">
+        <a href="../index.html" class="intro_button">
+            Back to Home
+        </a>
+    </div>
+
+    <!-- Scripts (keep your existing ones) -->
     <script src="../src/scatterplot.js"></script>
     <script src="../src/nodelink.js"></script>
     <script src="../src/AdjMatrix.js"></script>
 
-    <!-- ← ONLY THIS ONE LINE ADDED (exactly matches your main site style) -->
-    <div style="text-align:center; margin:4em 0;">
-        <a href="../index.html" class="intro_button" style="font-size:1.1em; padding:0.9em 2.2em;">
-            ← Back to Home
-        </a>
-    </div>
-
 </body>
-
 </html>
