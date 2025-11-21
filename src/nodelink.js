@@ -218,11 +218,11 @@
         "Accompany": { type: "Video Production", theme: "Companionship", link: "https://youtu.be/ve37QFmOpJQ" },
         "Gossip Gambler": { type: "Video Production", theme: "Comedy & Rumour", link: "https://youtu.be/42Fur6VHkXk" },
         "Two Views of Back": { type: "Chinese Creative Writing", theme: "Observation", link: "https://portland-my.sharepoint.com/..." },
-        "The Circle of Life": { type: "Photography", theme: "Ups and Downs in Life", photos: ["pictures/life1.JPG", "pictures/life2.JPG"] },
-        "Letter": { type: "Installation", theme: "Pandemic & Communication", photos: ["pictures/letter1.jpeg", "pictures/letter2.jpeg"] },
-        "Glimpse of Anxious Time": { type: "Installation + Photography", theme: "Family of Origin, Attachment", photos: ["pictures/glimpse1.jpeg", "pictures/glimpse2.jpeg"] },
-        "Lantau Tomorrow Vision (Peng Chau)": { type: "Exhibition Planning", theme: "Urban Development & Community", photos: ["pictures/lantau1.jpeg", "pictures/lantau2.JPG"] },
-        "Academic Trauma": { type: "Participatory Project", theme: "Education & Mental Health", photos: ["pictures/trauma1.jpg", "pictures/trauma2.jpg"] }
+        "The Circle of Life": { type: "Photography", theme: "Ups and Downs in Life"},
+        "Letter": { type: "Installation", theme: "Pandemic & Communication"},
+        "Glimpse of Anxious Time": { type: "Installation + Photography", theme: "Family of Origin, Attachment" },
+        "Lantau Tomorrow Vision (Peng Chau)": { type: "Exhibition Planning", theme: "Urban Development & Community"},
+        "Academic Trauma": { type: "Participatory Project", theme: "Education & Mental Health" }
     };
 
     const showcaseWorks = ["The Circle of Life", "Letter", "Glimpse of Anxious Time", "Lantau Tomorrow Vision (Peng Chau)", "Academic Trauma"];
